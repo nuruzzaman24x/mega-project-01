@@ -56,7 +56,7 @@ pipeline {
         stage("SonarQube: Code Analysis"){
             steps{
                 script{
-                    sonarqube_analysis("Sonar","mega","mega")
+                    sonarqube_analysis("sonar-server","mega","mega")
                 }
             }
         }
