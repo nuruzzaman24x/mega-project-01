@@ -19,7 +19,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    code_checkout("https://github.com/bongodev/mega.git","main")
+                    code_checkout("https://github.com/nuruzzaman24x/mega-project-01.git","main")
                 }
             }
         }
@@ -56,7 +56,7 @@ pipeline {
         stage("Git: Code update and push to GitHub"){
             steps{
                 script{
-                    withCredentials([gitUsernamePassword(credentialsId: 'Github-cred', gitToolName: 'Default')]) {
+                    withCredentials([gitUsernamePassword(credentialsId: 'github-access', gitToolName: 'Default')]) {
                         sh '''
                         echo "Checking repository status: "
                         git status
@@ -68,7 +68,7 @@ pipeline {
                         git commit -m "Updated environment variables"
                         
                         echo "Pushing changes to github: "
-                        git push https://github.com/bongodev/mega.git main
+                        git push https://github.com/nuruzzaman24x/mega-project-01.git main
                     '''
                     }
                 }
