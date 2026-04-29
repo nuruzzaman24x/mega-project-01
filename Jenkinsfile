@@ -3,7 +3,7 @@ pipeline {
     agent {label 'Node'} # agent any; if you are running Jenkins on one (master) machine
     
     environment{
-        SONAR_HOME = tool "Sonar"
+        SONAR_HOME = tool "sonar-server"
     }
     
     parameters {
