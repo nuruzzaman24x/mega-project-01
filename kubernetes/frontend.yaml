@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: nuruzzaman24x/mega-frontend-beta:v100
+          image: nuruzzaman24x/mega-frontend-beta:v1
           ports:
             - containerPort: 5173
 ---
